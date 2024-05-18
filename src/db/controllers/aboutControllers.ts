@@ -2,10 +2,12 @@ import About, { IAbout } from "../models/about";
 
 interface ICreateAboutParams {
   text: string;
+  resumeUrl?: string;
 }
 
 interface IUpdateAboutParams {
   text?: string;
+  resumeUrl?: string;
 }
 
 const createAbout = async (aboutInfo: ICreateAboutParams) => {
@@ -55,6 +57,7 @@ const updateAbout = async (id: string, fieldsToUpdate: IUpdateAboutParams) => {
       throw new Error("About entry not found.");
     }
     about.text = fieldsToUpdate.text || about.text;
+    about.resumeUrl = fieldsToUpdate.resumeUrl || about.resumeUrl;
     await about.save();
     success = true;
   } catch (error: unknown) {
