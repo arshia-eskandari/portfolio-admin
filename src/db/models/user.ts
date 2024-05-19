@@ -31,7 +31,11 @@ const UserSchema = new mongoose.Schema<IUser>({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, required: true, default: Role.User },
-  createdAt: { type: Number, required: true },
+  createdAt: {
+    type: Number,
+    required: true,
+    default: () => new Date().getTime(),
+  },
   updatedAt: { type: Number, required: false },
 });
 
@@ -42,14 +46,12 @@ UserSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 10);
   }
-  if (this.isNew) {
-    this.createdAt = timestamp;
-  } else {
+  if (!this.isNew) {
     this.updatedAt = timestamp;
   }
   next();
 });
 
-const User = mongoose.model<IUser>("User", UserSchema);
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
 
 export default User;
