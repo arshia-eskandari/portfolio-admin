@@ -60,3 +60,23 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.dropdown-button:focus + .dropdown-menu {
+  display: block; /* Show the dropdown menu when the button is focused */
+}
+
+.hiddenTransition {
+  transition:
+    visibility 0s linear 0.5s,
+    opacity 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visibleTransition {
+  transition:
+    visibility 0s linear 0s,
+    opacity 0.5s linear;
+  opacity: 1;
+  visibility: visible;
+}

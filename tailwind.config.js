@@ -3,12 +3,11 @@ module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{ts,tsx}",
+    "./public/**/*.html",
   ],
   theme: {
     extend: {},
   },
-  daisyui: {
-    themes: ["dark"],
-  },
-  plugins: [require("daisyui")],
+  darkMode: 'media',
 };
