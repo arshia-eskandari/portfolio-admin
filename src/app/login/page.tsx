@@ -10,10 +10,10 @@ import TextInput from "@/components/TextInput/TextInput";
 export default function Login() {
   const [state, formAction] = useFormState(login, { success: false });
   return (
-    <div className="flex h-full w-full justify-center">
+    <div className="flex justify-center w-full h-full">
       <form
         action={formAction}
-        className="h-80 w-96 max-w-sm self-center rounded-lg bg-slate-950 p-10"
+        className="self-center max-w-sm p-10 rounded-lg w-96 bg-slate-950"
       >
         <h1 className="pb-8 text-center text-white">
           Portfolio Admin Panel Login
@@ -21,13 +21,13 @@ export default function Login() {
         <TextInput
           name="email"
           type="email"
-          containerClassName={state?.errors?.email ? "mb-2" : ""}
+          containerClassName={state?.errors?.email ? "mb-1" : ""}
         />
         <FieldError errors={state?.errors?.email} />
         <TextInput
           name="password"
           type="password"
-          containerClassName={state?.errors?.password ? "mb-2" : ""}
+          containerClassName={state?.errors?.password ? "mb-1" : ""}
         />
         <FieldError errors={state?.errors?.password} />
         <Button
