@@ -8,13 +8,13 @@ const FieldError: FC<IFieldErrors> = ({ errors }) => {
   if (!errors) return null;
 
   return (
-    <div className="p-2">
-      {errors.map((error, i) => (
-        <p className="text-tiny text-red-400 list-item" key={error + i}>
-          {error}
+    <>
+      {errors?.map((error) => (
+        <p className="mb-4 text-sm text-red-600 dark:text-red-500" key={error}>
+          <span className="font-medium">{error}</span>
         </p>
       ))}
-    </div>
+    </>
   );
 };
 

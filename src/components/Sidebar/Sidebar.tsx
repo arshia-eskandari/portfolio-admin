@@ -17,8 +17,8 @@ import Button from "../Button/Button";
 const Sidebar = () => {
   return (
     <div
-      id="default-sidebar"
-      className="h-screen w-80 overflow-y-auto bg-gray-50 dark:bg-slate-900 p-8"
+      id="sidebar"
+      className="h-screen w-80 overflow-y-auto bg-slate-950 p-8"
       aria-label="Sidebar"
     >
       <Link href="/" text="Dashboard" icon={faPieChart} />
@@ -27,12 +27,7 @@ const Sidebar = () => {
         text="Sections"
         icon={faLayerGroup}
         dropdownItems={[
-          <Link
-            href="/hero"
-            text="Hero"
-            icon={faStar}
-            key={"hero-section"}
-          />,
+          <Link href="/hero" text="Hero" icon={faStar} key={"hero-section"} />,
           <Link
             href="/about"
             text="About"
@@ -59,8 +54,13 @@ const Sidebar = () => {
           />,
         ]}
       />
-      <Link href="/login" text="Logout" icon={faRightFromBracket} />
-      <Button onClick={() => {}}  text="Logout" icon={faRightFromBracket} textAlign="left"/>
+      <Button
+        onClick={() => {
+          console.log("clicked");
+        }}
+        text="Logout"
+        icon={faRightFromBracket}
+      />
     </div>
   );
 };

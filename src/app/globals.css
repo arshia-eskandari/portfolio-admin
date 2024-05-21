@@ -26,8 +26,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Inter", sans-serif;
-  background-color: white;
-  color: white;
 }
 
 a:not([class]) {
@@ -61,22 +59,10 @@ select {
   }
 }
 
-.dropdown-button:focus + .dropdown-menu {
-  display: block; /* Show the dropdown menu when the button is focused */
-}
-
-.hiddenTransition {
-  transition:
-    visibility 0s linear 0.5s,
-    opacity 0.5s linear;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.visibleTransition {
-  transition:
-    visibility 0s linear 0s,
-    opacity 0.5s linear;
-  opacity: 1;
-  visibility: visible;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
 }
