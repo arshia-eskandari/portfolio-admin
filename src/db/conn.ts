@@ -8,15 +8,15 @@ let dbConnected = false;
 
 const connectDB = async () => {
   if (dbConnected) {
-    return;
+    return { success: true, message: "MongoDB already connected" };
   }
   try {
     await mongoose.connect(dbConnectionString);
     dbConnected = true;
-    console.log("MongoDB connected");
+    return { success: true, message: "MongoDB connected" };
   } catch (error: unknown) {
     console.log("🚀 ~ connectDB ~ error:", error);
-    process.exit(1);
+    return { success: false, message: error };
   }
 };
 
