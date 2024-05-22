@@ -1,0 +1,14 @@
+.link-container {
+  @apply flex items-center p-2 rounded-lg text-white;
+}
+
+
+.link-container:hover, .link-container:hover * {
+  @apply bg-gray-700;
+  @apply text-white;
+}
+
+.link-icon {
+  @apply w-5 h-5;
+  @apply text-gray-400;
+}

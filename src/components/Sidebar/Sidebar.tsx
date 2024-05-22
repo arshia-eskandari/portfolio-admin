@@ -1,4 +1,5 @@
 "use client";
+import "./Sidebar.css";
 import Link from "../Link/Link";
 import {
   faPieChart,
@@ -16,11 +17,7 @@ import Button from "../Button/Button";
 
 const Sidebar = () => {
   return (
-    <div
-      id="sidebar"
-      className="h-screen w-80 overflow-y-auto bg-slate-950 p-8"
-      aria-label="Sidebar"
-    >
+    <div id="sidebar" className="sidebar-container" aria-label="Sidebar">
       <Link href="/" text="Dashboard" icon={faPieChart} />
       <Link href="/media" text="Media" icon={faFile} />
       <DropdownButton

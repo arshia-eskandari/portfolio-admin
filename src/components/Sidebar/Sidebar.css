@@ -1,0 +1,7 @@
+.sidebar-container {
+  @apply h-screen;
+  @apply w-80;
+  @apply overflow-y-auto;
+  @apply bg-slate-950;
+  @apply p-8;
+}

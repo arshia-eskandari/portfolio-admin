@@ -1,0 +1,33 @@
+.dropdown-open {
+  @apply transition-transform duration-500 rotate-180;
+}
+
+.dropdown-closed {
+  @apply transition-transform duration-500 rotate-0;
+}
+
+.dropdown-icon {
+  @apply w-5 h-5;
+  @apply transition duration-75;
+  @apply text-gray-400 group-hover:text-white;
+}
+
+.dropdown-items {
+  @apply transition duration-500;
+  @apply py-2 space-y-2 pl-6;
+}
+
+.dropdown-button {
+  @apply w-full;
+  @apply flex items-center justify-between;
+  @apply p-2;
+  @apply rounded-lg;
+  @apply text-white;
+  @apply focus:outline-none;
+}
+
+.dropdown-button:hover,
+.dropdown-button:hover * {
+  @apply bg-gray-700;
+  @apply text-white;
+}

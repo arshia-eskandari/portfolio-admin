@@ -1,4 +1,5 @@
 "use client";
+import './Button.css'
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
@@ -20,14 +21,14 @@ const Button: FC<IButtonProp> = ({
 }) => {
   return (
     <>
-      <button onClick={onClick} type={type} className="w-full dropdown-button">
+      <button onClick={onClick} type={type} className="w-full">
         <div
-          className={`group-hover group flex w-full items-center rounded-lg p-2 text-white hover:bg-gray-700 focus:outline-none ${className}`}
+          className={`button-inner-container ${className}`}
         >
           {icon ? (
             <FontAwesomeIcon
               icon={icon}
-              className="w-5 text-gray-400 duration-75 h-5transition group-hover:text-white"
+              className="icon"
             />
           ) : null}
           {type === "submit" ? (

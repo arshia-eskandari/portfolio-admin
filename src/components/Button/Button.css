@@ -1,0 +1,21 @@
+.button-inner-container {
+  @apply flex;
+  @apply w-full;
+  @apply items-center;
+  @apply rounded-lg;
+  @apply p-2;
+  @apply text-white;
+  @apply focus:outline-none;
+}
+
+.button-inner-container:hover,
+.button-inner-container:hover * {
+  @apply bg-gray-700;
+  @apply text-white;
+}
+
+.icon {
+  @apply w-5 h-5;
+  @apply text-gray-400;
+  @apply transition duration-75;
+}

@@ -1,3 +1,4 @@
+import './Link.css'
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -16,11 +17,11 @@ const SidebarLink: FC<ISidebarLinksProp> = ({
 }) => {
   return (
     <Link href={href}>
-      <div className="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group group-hover">
+      <div className="link-container">
         {icon ? (
           <FontAwesomeIcon
             icon={icon}
-            className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white"
+            className="link-icon"
           />
         ) : null}
         <span className="ms-3">{text}</span>

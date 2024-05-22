@@ -1,0 +1,22 @@
+.text-input-container {
+  @apply relative;
+  @apply mb-6;
+}
+
+.text-input-icon {
+  @apply pointer-events-none;
+  @apply absolute;
+  @apply inset-y-0 start-0 flex items-center;
+  @apply ps-3.5;
+}
+
+.text-input {
+  @apply block;
+  @apply w-full;
+  @apply rounded-lg;
+  @apply border border-gray-600;
+  @apply bg-gray-700;
+  @apply p-2.5 ps-10;
+  @apply text-sm text-white placeholder-gray-400;
+  @apply outline-none;
+}
