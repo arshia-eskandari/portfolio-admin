@@ -1,0 +1,5 @@
+.error-page-container {
+  @apply h-full;
+  @apply text-center;
+  @apply flex flex-col items-center justify-center;
+}
